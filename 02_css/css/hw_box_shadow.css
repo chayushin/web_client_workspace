@@ -1,0 +1,18 @@
+#img-wrapper {
+    background-color: gainsboro;
+    padding: 30px 60px;
+    
+    display: flex;
+    justify-content: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    align-items: center;
+}
+
+.sunImage {
+    width: 250px;
+    height: 150px;
+    padding: 0px 7px;
+}
+
+.sunImage:hover {
+    box-shadow: 5px 5px 10px 5px gray;
+}
