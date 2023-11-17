@@ -17,7 +17,7 @@ ul.menu li {
     text-align: center;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* 생략가능 */
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
