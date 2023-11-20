@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 실습문제</title>
+</head>
+<body>
+    <h1>배열 실습문제</h1>
+    <button onclick="test1();">영화 입력</button>
+    <button onclick="test2();">무지개</button>
+    <button onclick="test3();">배열 순회</button>
+
+    <script>
+        // 영화 입력받은 후 오름차순 정렬
+        function test1(){
+            const movies = prompt("영화를 입력해주세요.", "쇼생크탈출, 까모메식당, 본아이덴티티, 그린나이트, 진격의 거인");
+            const moviesAry = movies.split(", ");
+            alert(moviesAry.sort());
+        }
+
+        
+        function test2(){
+            const rainbow = ["빨", "주", "노", "초", "파", "남", "보"];
+            for(let i = 0; i < rainbow.length; i++){
+                console.log(rainbow.toString());
+                rainbow.push(rainbow.shift());
+            }
+        }
+
+        
+        function test3() {
+            const arr1 = [];
+            const arr2 = [];
+            for(let i = 0; i < 100; i++){
+                arr1[i] = i+1;
+            }
+            for (const index in arr1){
+                arr2[index] = arr1[arr1.length-1-index];
+            }
+            console.log(arr1);
+            console.log(arr2);
+        }
+
+    </script>
+</body>
+</html>
