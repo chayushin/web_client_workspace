@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제_함수</title>
+</head>
+<body>
+    <h1>실습문제_함수</h1>
+    
+    <script>
+        //1 답: z = 100 / z = 50
+        let z = 50;
+        (() => {
+            let z = 55;
+            z += 45;
+            console.log(`z = ${z}`);
+        })();              
+        console.log(`z = ${z}`);   
+        
+        //2 답: x + y + z = 110 / y + z = 100 / 실습문제_함수.html:30 Uncaught ReferenceError: x is not defined 
+        let y = 99;
+        (() => {
+            let x = 100;
+            let y = 9;
+            z = 1;
+            console.log(`x + y + z = ${x + y + z}`);
+        })();
+        console.log(`y + z = ${y + z}`);
+        
+        // console.log(`x + y + z = ${x + y + z}`);
+        
+        //3 답: 1/2/3/4/5/6/7/8/9/10/i = 11
+        let i; // 전역 i
+        for (i = 1; i <= 10; i++) {
+            console.log(i); // 1~10까지 출력
+        }
+        
+        (() => {
+            console.log(`i = ${i}`); 
+        })();
+            
+        //4 답: num = 100
+        function foo(){
+            const num = 100;
+            return () => {
+                console.log(`num = ${num}`);
+            }
+        }
+        const num = 200;
+        const too = foo();
+        too();
+    </script>    
+</body>
+</html>
