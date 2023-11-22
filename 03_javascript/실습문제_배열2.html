@@ -46,7 +46,7 @@
     };
     
     const test2 = () =>{
-        const strs = `김지영,25,010-1234-5678
+        const str = `김지영,25,010-1234-5678
 박준호,32,010-9876-5432
 이민지,28,010-5555-5555
 정승훈,45,010-1111-2222
@@ -64,11 +64,13 @@
     const nameArr = [];
     const ageArr = [];
     const phoneArr = [];
+    const arr = str.split('\n');
+    arr.forEach((v, i)=>{
+        arr[i].split(',');
+        
+    });        
+    console.log(arr);
 
-        const strsSp = () => {
-            const arr = strs.split(',','\n');            
-            
-        }
         
     };
 

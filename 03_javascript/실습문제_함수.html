@@ -43,9 +43,7 @@
         //4 답: num = 100
         function foo(){
             const num = 100;
-            return () => {
-                console.log(`num = ${num}`);
-            }
+            return () => console.log(`num = ${num}`);
         }
         const num = 200;
         const too = foo();
