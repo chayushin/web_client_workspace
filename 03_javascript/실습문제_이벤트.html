@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 실습문제</title>
+  </head>
+  <body>
+    <h1>이벤트 실습문제</h1>
+    <button type="button" id="btn-generate">버튼생성</button>
+    <div class="btn-wrapper"></div>
+    <script>
+      const str = `네이버,https://www.naver.com
+구글,https://www.google.com
+W3C,https://www.w3.org/
+MDN Web,https://developer.mozilla.org/en-US/
+와삼,https://www.w3schools.com`;
+      const temp = str.split("\n");
+      document.querySelector("#btn-generate").onclick = (e) => {
+        document.querySelector(".btn-wrapper").innerHTML = "";
+        let cnt = 0;
+        temp.forEach((ch) => {
+          let hpName = ch.split(",")[0];
+          let hpUrl = ch.split(",")[1];
+          document.querySelector(".btn-wrapper").innerHTML += `<br><button><a href="${hpUrl}" target = _blank>${hpName}</a></button><br>`;
+        });
+      };
+    </script>
+  </body>
+</html>

@@ -27,11 +27,9 @@
 		return (b) => console.log(b);
 	}
 
-	const coo = (c) => {
-		return (n) => {
-		  console.log(c * n);
-		}
-	}
+	const coo = (c) => (n) => console.log(c * n);
+		
+	
 	</script>
 
 
@@ -51,9 +49,18 @@
 
 	<script>
 	const mkAddFunc = () => {
-		
+		let sum = 0;
+		return () => {
+			const myadder = document.querySelector("#myadder");
+			// 숫자, '', null은 false반환. 문자열, undefined등 숫자변환불가인 값은 true를 반환
+			if(isNaN(myadder.value)) return;	
+			//input타입과 상관없이 value의 타입은 string임.
+			sum += Number(myadder.value);
+			result.innerHTML = sum;
+		};	
 	};
 	const addFunc = mkAddFunc();
+
 
 	</script>
 </body>
