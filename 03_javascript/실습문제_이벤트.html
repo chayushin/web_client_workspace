@@ -18,7 +18,6 @@ MDN Web,https://developer.mozilla.org/en-US/
       const temp = str.split("\n");
       document.querySelector("#btn-generate").onclick = (e) => {
         document.querySelector(".btn-wrapper").innerHTML = "";
-        let cnt = 0;
         temp.forEach((ch) => {
           let hpName = ch.split(",")[0];
           let hpUrl = ch.split(",")[1];
