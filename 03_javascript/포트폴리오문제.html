@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 문제</title>
+    <style>
+        hr {
+            margin: 20px;
+        }
+        
+        label {
+            display:inline-block;
+            text-align:center;
+            width:80px;
+            font-weight:bold;
+        }
+        
+        .container *{
+            vertical-align: middle;
+        }
+
+        div {
+            margin-top: 5px;
+        }
+    
+        input {
+            width: 35%;
+        }
+
+        textarea[name="content"] {
+            width: 35%;
+            height: 200px;
+        }
+
+        .writeButton{
+            margin-left: 200px;
+        }
+
+  
+
+        table {
+            border: 1px solid black;
+        }
+
+        th, td {
+            border: 1.5px solid black;
+            padding: 1px;
+        }
+
+        thead, tfoot {
+            background-color: darkorange;
+            color: white;
+        }
+
+        tbody {
+            background-color: bisque;
+            color:black;
+            font-weight: 550;
+        }
+
+        tbody>tr> :nth-child(2) {
+            width: 50%;
+        }
+
+        tbody>tr> :nth-child(3) {
+            width: 8%;
+        }
+
+        tbody>tr> :nth-child(3) >button{
+            width: 100%;
+            height: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>포트폴리오 문제</h1>
+    <hr>
+    <form name="portfolio" action="insert.no" method="post">
+        <fieldset>
+            <legend>공지사항 작성하기</legend>
+            <div>
+                <label for="title">제목</label>
+                <input type="text" name="title" placeholder="제목을 입력하시오." required>
+            </div>
+            
+            <div class="container">
+                <label for="content">내용</label>
+                <textarea name="content" placeholder="내용을 입력 하시오."></textarea>
+            </div>
+            
+            <div>
+                <label for="uploadFile">첨부파일</label>
+                <button type="button" uploadFile">파일 선택</button>
+                <span>선택된 파일 없음</span>
+            </div>
+            
+            <div>
+                <button type="button" class="writeButton">작성하기</button>
+            </div>
+        </fieldset>
+    </form>
+        <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th colspan="2">제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9</td>
+                <td>공지사항 제목 9</td>
+                <td><button>바로가기</button></td>
+                <td>user01</td>
+                <td>2021-03-29</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>공지사항 제목 6</td>
+                <td><button>바로가기</button></td>
+                <td>answ445</td>
+                <td>2021-03-12</td>
+                <td>67</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>공지사항 제목 3</td>
+                <td><button>바로가기</button></td>
+                <td>testg12</td>
+                <td>2021-03-01</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>공지사항 제목 2</td>
+                <td><button>바로가기</button></td>
+                <td>palwe3</td>
+                <td>2021-01-02</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>공지사항 제목 1</td>
+                <td><button>바로가기</button></td>
+                <td>xml23</td>
+                <td>2020-12-24</td>
+                <td>124</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">전체공지사항 갯수</th>
+                <th colspan="2">5개</th>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

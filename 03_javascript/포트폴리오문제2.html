@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오문제2</title>
+    <style>
+        body {
+            background-color: rgba(179, 230, 245, 0.514);
+        }
+
+        .box {
+            width: 500px;
+            height: 600px;
+            background-color: whitesmoke;
+            border: 3px solid rgba(128, 128, 128, 0.281);
+            margin: 100px auto;
+            font-size: 19px;
+            text-align: right;
+            padding: 40px;
+        }
+
+        div {
+            height: 80px;
+        }
+       
+        
+        label {
+            display:inline-block;
+            text-align:left;
+            width:180px;
+            font-weight:900;
+        }
+
+        label[for="siteDomain"]{
+            width: 0px;
+        }
+        
+        input {
+            border: none;
+            border-bottom: 2px dashed ;
+            background-color: whitesmoke;
+            width: 60%;
+            margin-top: 10%;
+        }
+
+        .divEmail input{
+            width: 26%;
+        }
+
+        button {
+            background-color: rgba(116, 212, 21, 0.562);
+            font-weight: bold;
+            width:100%;
+            height: 50px;
+            border:none;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+        .box span{
+            display: inline-block;
+            
+        }
+        span.whenFocus{
+            font-size: 15px;
+            color:darkgray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form name="porfolio2" action="포트폴리오문제2.html" method="get">
+            <br>
+            <div>
+                <label for="userId">아이디</label>
+                <input type="text" name="userId" id="userId" required>
+                <br>
+                <span class="whenFocus"></span>
+            </div>
+            <div>
+                <label for="password">패스워드</label>
+                <input type="password" name="password" id="password" required>
+                <br>
+                <span class="whenFocus"></span>
+            </div>
+            <div>
+                <label for="confirm-password">패스워드 확인</label>
+                <input type="password" id="passwordCheck" required>
+                <br>
+                <span class="whenFocus"></span>
+            </div>
+            <div class="divEmail">
+                <label for="emailId">이메일</label>
+                <input type="txt" name="emailId" id="emailId" required>
+                <span>@</span>
+                <label for="siteDomain"></label>
+                <input type="txt" name="siteDomain" id="siteDomain" required>
+                <br>
+                <span class="whenFocus"></span>
+            </div>
+            <div>
+                <label for="address">주소</label>
+                <input type="txt" name="address" id="address" placeholder="주소 입력칸 입니다." required>
+                <br>
+                <label for="detailAddress"></label>
+                <input type="txt" name="detailAddress" id="detailAddress" placeholder="상세 주소 입력칸 입니다." required>
+                <br>
+                <span class="whenFocus"></span>
+            </div>
+            <br><br><br>
+        
+            <div>
+                <button>가 입</button>
+            </div>
+            
+        </form>
+    </div>
+
+
+
+
+    <script>
+        document.querySelector('#password').onfocus = (e)=>{
+            const spanTagObj = e.target.nextElementSibling.nextElementSibling;
+            spanTagObj.innerHTML = '';
+            spanTagObj.innerHTML += '영문자 대/소문자 특수문자 특수문자, 숫자 포함 8~32자';
+             
+        };
+
+        const showEssentialMessage = () => {
+            const spanTagObjId = document.querySelector('#userId').nextElementSibling.nextElementSibling;
+            const spanTagObjPw = document.querySelector('#password').nextElementSibling.nextElementSibling;
+            const spanTagObjCkPw = document.querySelector('#passwordCheck').nextElementSibling.nextElementSibling;
+            const inputIdTag = document.querySelector('#userId');
+            const inputPwTag = document.querySelector('#password');
+            const inputPwCkTag = document.querySelector('#passwordCheck');
+           
+            if(!inputIdTag.value){
+                spanTagObjId.innerHTML = '';
+                spanTagObjId.innerHTML += '아이디는 필수 입력 항목 입니다';
+            } else {
+                spanTagObjId.innerHTML = '';
+            }
+            if(!inputPwTag.value){
+                spanTagObjPw.innerHTML = '';
+                spanTagObjPw.innerHTML += '비밀번호는 필수 입력 항목 입니다';
+            } else {
+                spanTagObjPw.innerHTML = '';
+            }
+            if(!inputPwCkTag.value){
+                spanTagObjCkPw.innerHTML = '';
+                spanTagObjCkPw.innerHTML += '비밀번호 확인은 필수 입력 항목 입니다';
+            } else{
+                spanTagObjCkPw.innerHTML = '';
+            }
+        }
+
+        document.querySelector('#emailId').onfocus = showEssentialMessage;
+        document.querySelector('#siteDomain').onfocus = showEssentialMessage;
+        document.querySelector('#address').onfocus = showEssentialMessage;
+        document.querySelector('#detailAddress').onfocus = showEssentialMessage;
+   
+
+
+    </script>
+</body>
+
+</html>
