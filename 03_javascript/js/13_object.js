@@ -51,7 +51,7 @@ const test1 = () => {
 
     // 존재하지 않는 속성을 참조
     console.log(obj.father); // undefined
-    // console.log(obj.fater.job()); // Uncaught TypeError: Cannot read properties of undefined (reading 'job')
+    // console.log(obj.father.job()); // Uncaught TypeError: Cannot read properties of undefined (reading 'job')
     
     // 속성 추가
     obj.father = '홍명보';
