@@ -8,8 +8,7 @@
  * 
  * jquery방식의 이벤트 핸들러 등록
  */
-// $ === jQuery
-jQuery("#btn1").on('click', (e)=>{
+$("#btn1").on('click', (e)=>{
     console.log('🥩🥩🥩');
 });
 $("#btn2").on('click', (e)=>{

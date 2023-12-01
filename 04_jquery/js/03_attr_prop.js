@@ -20,7 +20,7 @@ $(btn1).on('click', ()=>{
 /**
  * prop
  * - 자바스크립트 boolean으로 제어되는 속성
- * - checked, selected, disabled
+ * - checked, selected
  */
 $(btn2).on('click', ()=>{
     console.log($('[name=pizza').prop('checked'));

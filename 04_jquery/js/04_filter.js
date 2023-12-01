@@ -4,7 +4,7 @@
  *  
  * - filter(selector)
  * - first()
- * - last()
+ * - lsat()
  * - eq(n)
  * - not(selector)
  * 
